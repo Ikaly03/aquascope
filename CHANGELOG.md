@@ -13,6 +13,7 @@ All notable changes to AquaScope are documented here.
 ### Fixed
 - **The Explorer's recorded answers stay on the river the question names** (#731). The Kingston recording answered a question about the Thames with the Hogsmill, a tributary a kilometre away, and every check passed it. `assess_site` now returns each gauge's river, `verify` gains a `river_matches_the_question` check, the analyst is told to use a gauge on the named river, the recorder refuses to publish a recording that fails it, and the wrong Kingston recording is retired from the Ask panel.
 - **Cite 1.2.0 by its version DOI**: `CITATION.cff`, the README and docs BibTeX, the Explorer's Cite this and the Studio deliverables now name v1.2.0's Zenodo DOI (10.5281/zenodo.24125206).
+- **Taiwan Civil IoT reads again** (#176). The SensorThings water-resource service moved from `sta.ci.taiwan.gov.tw` to `sta.colife.org.tw`; `taiwan_civil_iot` now uses the new endpoint, and TLS verification is back on (`verify=False` removed), since the new host serves a valid certificate.
 
 ## [1.2.0] - 2026-11-11
 
